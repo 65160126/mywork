@@ -1,4 +1,3 @@
-// search.js
 
 if (!localStorage.getItem("blogs")) {
   localStorage.setItem("blogs", JSON.stringify([]));
