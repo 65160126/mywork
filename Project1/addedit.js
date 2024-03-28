@@ -57,18 +57,6 @@ function findMaxblogId() {
   }
   return max;
 }
-
-// เพิ่มฟังก์ชัน editBlog โดยเพิ่มข้อความแสดงว่ามีการแก้ไขล่าสุด
-function editBlog(id) {
-  window.location.href = `addeditblog.html?id=${id}`;
-
-  // เพิ่มโค้ดที่จะเขียนข้อความว่ามีการแก้ไขข้อความนี้
-  var editInfo = document.createElement("p");
-  editInfo.textContent = "ข้อความนี้ถูกแก้ไขล่าสุด";
-  editInfo.style.color = "red";
-  document.body.appendChild(editInfo);
-}
-
 // เพิ่มโค้ดที่จะตั้งค่าค่าเริ่มต้นของ blog_creation_time
 if (id) {
   document.getElementById("blog_creation_time").value = new Date(
