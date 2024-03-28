@@ -15,14 +15,17 @@ function showAllBlogs(sortedBlogs) {
   for (var i = 0; i < sortedBlogs.length; i++) {
     html += `
     <div class="blog-item">
-      <h3>${sortedBlogs[i].title}</h3>
+   
+      <div class="head-blog"><h4>${sortedBlogs[i].title}</h4> <p>ลงเมื่อ: ${new Date(sortedBlogs[i].creationTime).toLocaleString(
+      "th-TH",
+      { hour12: false }
+      )}</p></div>
       <p>${sortedBlogs[i].content}</p>
-      <p>ลงเมื่อ: ${new Date(sortedBlogs[i].creationTime).toLocaleString(
-        "th-TH",
-        { hour12: false }
-      )}</p>
-      <button onclick="deleteBlog(${sortedBlogs[i].id})">ลบ</button>
-      <button onclick="editBlog(${sortedBlogs[i].id})">แก้ไข</button>
+        <div class="box-button">
+        <button onclick="deleteBlog(${sortedBlogs[i].id})"><p style="color: white;">ลบ</p></button>
+      <button onclick="editBlog(${sortedBlogs[i].id})"><p style="color: white;" >แก้ไข</p></button>
+        </div>
+      
     </div>
   `;
   }
