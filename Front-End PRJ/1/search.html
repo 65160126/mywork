@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog DB - JSON</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="header">
+    <h1>Blog DB</h1>
+  </div>
+  <div class="main">
+    <hr />
+    <button onclick="document.location='addeditblog.html'">เพิ่ม Blog</button>
+    <hr />
+    ผลการค้นหา<br />
+    <br />  
+    
+    <select id="sort-by-time">
+      <option value="oldest">Oldest First</option>
+      <option value="newest">Newest First</option>
+    </select>
+
+    <div id="blog-list"></div>
+  </div>
+  <script src="js/search.js"></script>
+</body>
+</html>
